@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .ctn
+        {
+            height: 200px;
+            width: 200px;
+            position: relative;
+            display: block;
+            overflow: hidden;
+        }
+        .box
+        {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+        }
+        .speed
+        {
+            transform: rotate(90deg);/*初始化旋转指针为0处*/
+            animation:duang 1.5s ease-out 1s infinite alternate;
+            -moz-animation:duang 1.5s ease-out 1s infinite alternate;
+            -webkit-animation:duang 1.5s ease-out 1s infinite alternate;
+            -o-animation:duang 1.5s ease-out 1s infinite alternate;
+        }
+
+        @keyframes duang
+        {
+            from {transform: rotate(120deg);}
+            to {transform: rotate(400deg);}
+        }
+        @-moz-keyframes duang /* Firefox */
+        {
+            from {transform: rotate(120deg);}
+            to {transform: rotate(400deg);}
+        }
+        @-webkit-keyframes duang /* Safari 和 Chrome */
+        {
+            from {transform: rotate(120deg);}
+            to {transform: rotate(400deg);}
+        }
+        @-o-keyframes duang /* Opera */
+        {
+            from {transform: rotate(120deg);}
+            to {transform: rotate(400deg);}
+        }
+    </style>
+</head>
+<body>
+<div class="ctn" >
+
+    <img src="speed_mechanics.svg" class="box" alt="">
+    <img src="needle.svg" class="speed  box" alt="">
+
+</div>
+
+
+</body>
+</html>
